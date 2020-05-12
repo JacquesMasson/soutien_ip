@@ -82,7 +82,13 @@ public static class Tools
     
     public static string FilterLetters(string str)
     {
-        throw new NotImplementedException();
+        string res = "";
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (str[i] >= 65 && str[i] <= 90 || str[i] >= 97 && str[i] <= 122) res += str[i];
+        }
+
+        return res;
     }
 
     public static string Extract(string str, int start, int step)
